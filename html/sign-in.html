@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+        <div class="header-container">
+            <a href="/html/home.html" class="header-logo">
+                <img src="/bes-black.png" alt="Logo" width="120" height="90">
+            </a>
+            <div class="header-middle"></div>
+            <div class="header-user-section">
+                <button id="user-menu-button" class="header-user-button" aria-label="User account menu">
+                    👤
+                </button>
+                <div id="user-dropdown" class="header-dropdown" style="display: none;">
+                    <!-- Data inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main class="form-page">
+  <section class="form-container">
+    <h1 class="form-title">Sign In</h1>
+
+    <div id="errorBox" class="form-error" style="margin-bottom:1rem; display:none;"></div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input
+        id="email"
+        type="email"
+        class="form-input"
+        placeholder="Enter your email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="form-label">Password</label>
+      <input
+        id="password"
+        type="password"
+        class="form-input"
+        placeholder="Enter your password"
+      />
+    </div>
+
+    <button id="signInBtn" class="form-button">
+      Sign In
+    </button>
+
+    <div class="form-footer">
+      <a href="/html/sign-up.html" class="form-footer-link">
+        Sign Up
+      </a>
+    </div>
+  </section>
+</main>
+
+<script src="/js/data.js"></script>
+<script src="/js/user.js"></script>
+<script src="/js/sign-in.js"></script>
+
+</body>
+</html>
+
