@@ -27,19 +27,12 @@ function renderLeaderboard() {
     
     // Generate HTML for each row
     /* TODO */
-    /* Call map on mockLeaderboardData to add a row to the leaderboard for each user
-       The columns should be username, year, major, main club, num events attended */
-    const rowsHtml = mockLeaderboardData.map((entry) => {
-        return '<tr>' +
-            '<td>' + entry.username + '</td>' +
-            '<td>' + getYearLabel(entry.year) + '</td>' +
-            '<td>' + getMajorLabel(entry.major) + '</td>' +
-            '<td>' + getClubLabel(entry.main_club) + '</td>' +
-            '<td>' + entry.num_events_attended + '</td>' +
-        '</tr>';
-    }).join('');
+    /* Call map on mockLeaderboardData to add a row to the leaderboard for each user.
+       The columns should be username, year, major, main club, num events attended.
+       Call .join('') on the final result */
+    const rowsHtml = null;
     
     /* TODO */
     /* Set the innerHTML attribute of tbody to rows.html */
-    tbody.innerHTML = rowsHtml;
+    tbody.innerHTML = null;
 }

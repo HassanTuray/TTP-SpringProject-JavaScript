@@ -1,12 +1,16 @@
-// Getting page elements
 document.addEventListener('DOMContentLoaded', () => {
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
+  /* store references to the following elements from sign-in.html
+     email, password
+     signInBtn and errorBox have been done for you
+  */
   const signInBtn = document.getElementById("signInBtn");
   const errorBox = document.getElementById("errorBox");
 
-  // events
+  /* add an event listener to signInBtn
+     when the user clicks, it should call the handleSignIn function
+  */
   signInBtn.addEventListener("click", handleSignIn);
+  
 
   emailInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") handleSignIn();
@@ -32,15 +36,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to validate credentials and sign user in
 function handleSignIn() {
+  /* TODO */
+  /* store the value from emailInput using its' value attribute */
   const email = emailInput.value;
+
+  /* TODO */
+  /* Store the value of the passwordInput  */
   const password = passwordInput.value;
 
-  let stored = sessionStorage.getItem("leaderboardData");
-  mockLeaderboardData = JSON.parse(stored);
+  /* TODO */
+  /* load the leaderBoardData from sessionStorage and use parse the stored data */
+  let stored = null;
+  mockLeaderboardData = null;
 
-  let validAccount = mockLeaderboardData.find((user) =>
-    user.email === email && user.password === password
-  );
+  /* TODO */
+  /* Use the array function, find, on mockLeaderboardData 
+  to find a user whos email is equal to email and password is equal to password*/
+
+  let validAccount = null;
+
+  /* TODO */
+  /* Check if validAccount is null */
+  /* if it is null, call showError and display an erro message */
+  /* if it is not null, use sessionStorage to set the isSignedIn key to true 
+     and set the currUser to the result of calling stringify on the validAccount
+  */
 
   if (validAccount) {
     sessionStorage.setItem("isSignedIn", "true");
