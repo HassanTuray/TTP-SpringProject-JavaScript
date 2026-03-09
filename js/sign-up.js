@@ -1,19 +1,14 @@
-// Getting page elements
-const usernameInput = document.getElementById("username");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const yearSelect = document.getElementById("year");
-const majorSelect = document.getElementById("major");
-const mainClubSelect = document.getElementById("mainClub");
 
-const signUpBtn = document.getElementById("signUpBtn");
+/* TODO */
+/* store references to the following elements from sign-up.html using getElementById
+   username, email, password, year, major, mainClub, signUpBtn, errorBox, emailError, passwordError
+*/
 
-const errorBox = document.getElementById("errorBox");
-const emailErrorBox = document.getElementById("emailError");
-const passwordErrorBox = document.getElementById("passwordError");
 
-// events
-signUpBtn.addEventListener("click", handleSignUp);
+/* TODO */
+/* Add event listener for when the handleSignUp sign up button is clicked 
+   Once clicked it should invoke handleSignUp
+*/
 
 // Functions to control errors associated with signing up
 function showMainError(message) {
@@ -55,9 +50,12 @@ function handleSignUp() {
   const username = usernameInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
-  const year = yearSelect.value;
-  const major = majorSelect.value;
-  const main_club = mainClubSelect.value;
+
+  /* TODO */
+  /* Store the values of the yearSelect, majorSelect, and mainClubSelect elemeents */
+  const year = null;
+  const major = null;
+  const main_club = null;
 
   // email validation
   if (!validateEmail(email)) {
@@ -77,11 +75,18 @@ function handleSignUp() {
     return;
   }
 
-  let mockData = sessionStorage.getItem("leaderboardData");
-  mockData = JSON.parse(mockData);
+  /* TODO */
+  /* Load mockData form sessions storage*/
+  let mockData = null;
+  /* TODO */
+  /* Parse the mockData using JSON*/
+  mockData = null;
 
+  
   const num_events_attended = Math.floor(Math.random() * (60 - 0) + 0)
-  const currUser = {username: username, year: year, major: major, main_club: main_club, num_events_attended: num_events_attended, email: email, password: password};
+
+  /* TODO */
+  /* Create a javascript object that has username, year, majro, mainclub, and the num_events_attended, email, password*/
 
   mockData.push(currUser)
     
